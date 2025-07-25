@@ -1,23 +1,134 @@
 @import "tailwindcss";
+.deal-section{
+    margin-top: 20px;
+    max-width: 75%;
+}
+/* Plant lover */
+.plant-lover-section .left-side {
+  color: red;
+  position: relative;
+}
 
-.deal-section .box-1{
-    background:linear-gradient(rgba(0, 0, 0, 0.349),rgba(0, 0, 0, 0.233)),url('../assets/deal-bloom.png');
-    background-repeat: no-repeat;
-    background-size:cover;
-    border-radius: 20px;
-    margin-bottom: 20px;
+.plant-lover-section .badge {
+    width: 200px;
+    position: absolute;
+    top: -122px;
+    right: -72px;
+} 
+/* Responsive */
+@media screen and (max-width:768px){
+    .plant-lover-section .badge{
+        display: none;
+    }
+}
+/* Deal section */
+.deal-section .deal-lowerside{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 .deal-section .box-2{
-    background:linear-gradient(rgba(0, 0, 0, 0.349),rgba(0, 0, 0, 0.233)),url('../assets/deal-ana.png');
+    grid-row: span 2;
+}
+.deal-section .box-2{
+    grid-column: span 2;
+}
+.box-2-full{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.deal-section .box-1{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../assets/deal-bloom.png");
     background-repeat: no-repeat;
-    background-size:cover;
-    margin-bottom: 20px;
+    background-size: cover;
+}
+.deal-section .box-2{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../assets/deal-zabo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .deal-section .box-3{
-    background:linear-gradient(rgba(0, 0, 0, 0.349),rgba(0, 0, 0, 0.233)),url('../assets/deal-zabo.png');
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../assets/deal-ana.png");
     background-repeat: no-repeat;
-    background-size:cover;
-    border-radius: 20px;
-    margin-bottom: 20px;
+    background-size: cover;
+}
+/* Responsive deal section  */
+
+@media screen and (max-width:576px){
+    .deal-section .deal-lowerside{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+}
+    
 }
 
+/* Join section */
+.join-section{
+    margin-top: 50px;
+    height: 400px;
+     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../assets/news-letter-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.join-section .join-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.join-section input{
+    width: 600px;
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 2px;
+    margin-right: 0;
+}
+.join-section input::placeholder{
+    color: #000;
+    
+}
+.join-section .join-btn{
+    background-color: #E95A08;
+    border-radius: 2px;
+    color: #fff;
+    padding: 10px;
+}
+/* Responsive  */
+@media screen and (max-width:576px){
+    .join-container input{
+        max-width: 300px;
+    }
+    .join-btn{
+
+    }
+}
+
+/* Footer section */
+.footer-container{
+    max-width: 1000px;
+    margin: auto;
+   
+} 
+.footer-section p{
+    color: rgba(107, 114, 128, 1);
+    font-size: 22px;
+}
+.footer-section ul li{
+    margin-bottom: 20px;
+    color: rgba(107, 114, 128, 1);
+}
+
+/* Responsive */
+@media screen and (max-width:576px){
+    .footer-fourth,
+    .footer-second{
+        display: block;
+    }
+    .footer-fourth ul li>*{
+    margin-right: 5px;
+}
+}
